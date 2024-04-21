@@ -1,106 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="page">
 
 <head>
-	<title>PreviewPage</title>
+	<title>DynamicHeaderSite</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240421210059" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240421213301" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="view-transition" content="same-origin" />
 </head>
 
-<body class="body preview__page">
+<body class="body">
 	<div class="wrapper">
-		<main class="main">
-			<section class="preview">
-				<div class="preview__container">
-					<h1 class="preview__title">
-						Preview «DynamicHeaderSite»
-					</h1>
+		<header class="header">
+			<div class="header__container container">
+				<a class="header__logo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="170" height="60" viewBox="0 0 123 43" fill="none">
+						<g clip-path="url(#clip0_494_11)">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M7.12791 30.5104C8.8337 27.5143 10.7648 24.1224 12.7913 20.5664C19.2564 9.25066 24.5838 0 24.667 0C24.7503 0 24.4451 0.678947 23.9734 1.47105C23.5294 2.29145 20.3108 8.62829 16.8424 15.5592C13.374 22.4901 9.101 30.8638 7.38069 34.1737C5.63263 37.4836 4.21754 40.2559 4.21754 40.3125C4.21754 40.3974 13.6515 40.4539 25.1665 40.4539C36.6815 40.4539 46.1154 40.3408 46.1154 40.2276C46.1154 40.1145 46.0044 39.8882 45.8657 39.7467C45.7006 39.5423 44.7633 37.8912 43.2096 35H45.6858C48.2478 39.5457 50 42.6893 50 42.7737C50 42.8868 38.7625 43 25 43H0L0.527192 42.0664C0.736735 41.7363 3.39189 37.0726 7.12791 30.5104ZM32.0576 11C32.4293 11.6506 32.8107 12.3184 33.1997 13H31.9863C31.6811 12.3691 31.3545 11.6943 31.0182 11C29.0628 6.96268 26.7805 2.26604 26.4706 1.69737C25.9434 0.678947 25.6382 -0.028286 25.7769 0.141449C25.9043 0.271347 28.5539 4.86871 32.0576 11Z" fill="black" />
+							<path d="M27.368 25.028C27.368 25.3907 27.32 25.732 27.224 26.052C27.128 26.372 26.96 26.652 26.72 26.892C26.48 27.1267 26.1573 27.3133 25.752 27.452C25.352 27.5907 24.8453 27.66 24.232 27.66H23.944C23.5333 27.66 23.128 27.6467 22.728 27.62C22.328 27.5933 21.9387 27.5533 21.56 27.5V22.148C21.9387 22.0893 22.328 22.0467 22.728 22.02C23.128 21.9933 23.5333 21.98 23.944 21.98H24.232C24.8453 21.98 25.352 22.0493 25.752 22.188C26.1573 22.3267 26.48 22.516 26.72 22.756C26.96 22.9907 27.128 23.268 27.224 23.588C27.32 23.908 27.368 24.2493 27.368 24.612V25.028ZM23.984 26.396C24.464 26.396 24.832 26.3587 25.088 26.284C25.3493 26.204 25.5387 26.0947 25.656 25.956C25.7787 25.812 25.848 25.644 25.864 25.452C25.8853 25.26 25.896 25.0493 25.896 24.82C25.896 24.5907 25.8853 24.38 25.864 24.188C25.848 23.996 25.7787 23.8307 25.656 23.692C25.5387 23.5533 25.3493 23.4467 25.088 23.372C24.832 23.292 24.464 23.252 23.984 23.252C23.8453 23.252 23.6907 23.2547 23.52 23.26C23.3547 23.2653 23.1813 23.2733 23 23.284V26.364C23.1813 26.3747 23.3547 26.3827 23.52 26.388C23.6907 26.3933 23.8453 26.396 23.984 26.396ZM31.0263 25.508L28.9303 22.46V22.14H30.3463L31.7463 24.364L33.1543 22.14H34.5623V22.46L32.4663 25.508V27.5H31.0263V25.508ZM40.7314 25.58V22.14H42.1714V27.5H40.7314L37.9234 24.06V27.5H36.4834V22.14H37.9234L40.7314 25.58ZM44.2053 27.5V27.18L46.5893 22.14H48.0293L50.4133 27.18V27.5H49.1173L48.6533 26.46H45.9573L45.5013 27.5H44.2053ZM48.1253 25.26L47.3093 23.428L46.4933 25.26H48.1253ZM55.3977 26.404L53.8937 24.3V27.5H52.4537V22.14H53.8937L55.7657 24.884L57.6377 22.14H59.0777V27.5H57.6377V24.3L56.1337 26.404H55.3977ZM62.9688 22.14V27.5H61.5288V22.14H62.9688ZM65.2113 24.612C65.2113 24.2493 65.2566 23.908 65.3473 23.588C65.4379 23.268 65.5926 22.9907 65.8113 22.756C66.0299 22.516 66.3259 22.3267 66.6993 22.188C67.0726 22.0493 67.5419 21.98 68.1073 21.98H68.3953C68.7579 21.98 69.1099 22.004 69.4513 22.052C69.7926 22.0947 70.1286 22.1587 70.4593 22.244V23.548C70.2726 23.4947 70.0833 23.4493 69.8913 23.412C69.7046 23.3747 69.5179 23.3453 69.3313 23.324C69.1499 23.2973 68.9739 23.2787 68.8033 23.268C68.6379 23.2573 68.4886 23.252 68.3553 23.252C67.9393 23.252 67.6166 23.292 67.3873 23.372C67.1633 23.4467 66.9979 23.5533 66.8913 23.692C66.7899 23.8307 66.7286 23.996 66.7073 24.188C66.6913 24.38 66.6833 24.5907 66.6833 24.82C66.6833 25.0493 66.6913 25.26 66.7073 25.452C66.7286 25.644 66.7899 25.812 66.8913 25.956C66.9979 26.0947 67.1633 26.204 67.3873 26.284C67.6166 26.3587 67.9393 26.396 68.3553 26.396C68.4886 26.396 68.6379 26.3907 68.8033 26.38C68.9739 26.3693 69.1499 26.3533 69.3313 26.332C69.5179 26.3053 69.7046 26.2733 69.8913 26.236C70.0833 26.1933 70.2726 26.1453 70.4593 26.092V27.404C70.1286 27.484 69.7926 27.5453 69.4513 27.588C69.1099 27.636 68.7579 27.66 68.3953 27.66H68.1073C67.5419 27.66 67.0726 27.5907 66.6993 27.452C66.3259 27.3133 66.0299 27.1267 65.8113 26.892C65.5926 26.652 65.4379 26.372 65.3473 26.052C65.2566 25.732 65.2113 25.3907 65.2113 25.028V24.612ZM73.9781 22.14V24.22H76.7781V22.14H78.2181V27.5H76.7781V25.5H73.9781V27.5H72.5381V22.14H73.9781ZM85.663 23.42H81.975V24.22H84.863V25.5H81.975V26.22H85.663V27.5H80.535V22.14H85.663V23.42ZM87.6319 27.5V27.18L90.0159 22.14H91.4559L93.8399 27.18V27.5H92.5439L92.0799 26.46H89.3839L88.9279 27.5H87.6319ZM91.5519 25.26L90.7359 23.428L89.9199 25.26H91.5519ZM101.688 25.028C101.688 25.3907 101.64 25.732 101.544 26.052C101.448 26.372 101.28 26.652 101.04 26.892C100.8 27.1267 100.478 27.3133 100.072 27.452C99.6723 27.5907 99.1656 27.66 98.5523 27.66H98.2643C97.8536 27.66 97.4483 27.6467 97.0483 27.62C96.6483 27.5933 96.259 27.5533 95.8803 27.5V22.148C96.259 22.0893 96.6483 22.0467 97.0483 22.02C97.4483 21.9933 97.8536 21.98 98.2643 21.98H98.5523C99.1656 21.98 99.6723 22.0493 100.072 22.188C100.478 22.3267 100.8 22.516 101.04 22.756C101.28 22.9907 101.448 23.268 101.544 23.588C101.64 23.908 101.688 24.2493 101.688 24.612V25.028ZM98.3043 26.396C98.7843 26.396 99.1523 26.3587 99.4083 26.284C99.6696 26.204 99.859 26.0947 99.9763 25.956C100.099 25.812 100.168 25.644 100.184 25.452C100.206 25.26 100.216 25.0493 100.216 24.82C100.216 24.5907 100.206 24.38 100.184 24.188C100.168 23.996 100.099 23.8307 99.9763 23.692C99.859 23.5533 99.6696 23.4467 99.4083 23.372C99.1523 23.292 98.7843 23.252 98.3043 23.252C98.1656 23.252 98.011 23.2547 97.8403 23.26C97.675 23.2653 97.5016 23.2733 97.3203 23.284V26.364C97.5016 26.3747 97.675 26.3827 97.8403 26.388C98.011 26.3933 98.1656 26.396 98.3043 26.396ZM109.068 23.42H105.38V24.22H108.268V25.5H105.38V26.22H109.068V27.5H103.94V22.14H109.068V23.42ZM115.346 27.5L114.274 25.82C113.986 25.82 113.708 25.8173 113.442 25.812C113.175 25.8067 112.914 25.7827 112.658 25.74V27.5H111.218V22.14C111.676 22.0867 112.156 22.0467 112.658 22.02C113.164 21.9933 113.66 21.98 114.146 21.98H114.37C114.818 21.98 115.188 22.028 115.482 22.124C115.775 22.2147 116.01 22.34 116.186 22.5C116.362 22.66 116.484 22.8467 116.554 23.06C116.623 23.2733 116.658 23.5 116.658 23.74V24.06C116.658 24.396 116.591 24.7027 116.458 24.98C116.324 25.252 116.087 25.4627 115.746 25.612L116.738 27.18V27.5H115.346ZM114.162 23.26C113.975 23.26 113.743 23.2653 113.466 23.276C113.194 23.2867 112.924 23.3053 112.658 23.332V24.468C112.908 24.5 113.146 24.5213 113.37 24.532C113.594 24.5373 113.775 24.54 113.914 24.54C114.234 24.54 114.482 24.5267 114.658 24.5C114.834 24.468 114.962 24.4227 115.042 24.364C115.127 24.3053 115.178 24.2307 115.194 24.14C115.21 24.0493 115.218 23.94 115.218 23.812C115.218 23.7427 115.212 23.676 115.202 23.612C115.191 23.5427 115.151 23.4813 115.082 23.428C115.018 23.3747 114.914 23.3347 114.77 23.308C114.626 23.276 114.423 23.26 114.162 23.26Z" fill="black" />
+						</g>
+						<defs>
+							<clipPath id="clip0_494_11">
+								<rect width="170" height="60" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
 
-					<div data-tabs class="preview-tabs tabs">
-						<nav data-tabs-titles class="preview-tabs__navigation tabs__navigation">
-							<button type="button" class="preview-tabs__title tabs__title _tab-active">
-								Swiper
-							</button>
-							<button type="button" class="preview-tabs__title tabs__title">
-								FullPage
-							</button>
+				<div class="header__menu menu">
+					<div class="menu__container">
+						<nav class="menu__nav nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="index.html" class="nav__link">Главная</a>
+								</li>
+								<li class="nav__item">
+									<a href="docs.html" class="nav__link">Документация</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link">Демо</a>
+								</li>
+							</ul>
 						</nav>
 
-						<div data-tabs-body class="preview-tabs__content tabs__content">
-							<div class="preview-tabs__body tabs__body">
-								<div class="preview__inner">
-									<div class="preview__buttons">
-										<button class="preview__button preview__button-prev swiper-button-prev btn-reset">
-											<span><svg viewBox="0 0 16 16" class="bi bi-chevron-double-left" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" fill-rule="evenodd"></path>
-													<path d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" fill-rule="evenodd"></path>
-												</svg></span>
-										</button>
-										<button class="preview__button preview__button-next swiper-button-next btn-reset">
-											<span><svg viewBox="0 0 16 16" class="bi bi-chevron-double-right" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-													<path d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" fill-rule="evenodd"></path>
-													<path d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" fill-rule="evenodd"></path>
-												</svg></span>
-										</button>
-									</div>
-									<div class="preview__slider swiper">
-										<div class="preview__swiper swiper-wrapper">
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/1.webp" type="image/webp"><img src="img/preview/1.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/2.webp" type="image/webp"><img src="img/preview/2.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/3.webp" type="image/webp"><img src="img/preview/3.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/4.webp" type="image/webp"><img src="img/preview/4.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/5.webp" type="image/webp"><img src="img/preview/5.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-											<a href="#" class="preview__slide swiper-slide" tabindex="-1">
-												<div class="preview__image-ibg">
-													<picture><source srcset="img/preview/6.webp" type="image/webp"><img src="img/preview/6.jpg" alt="Картинка" loading="lazy" /></picture>
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="preview-tabs__body tabs__body">
-								<div class="preview__image-wrapper">
-									<picture><source srcset="img/preview/fullpage.webp" type="image/webp"><img src="img/preview/fullpage.png" alt="" /></picture>
-								</div>
-							</div>
+						<div class="menu__socials socials">
+							<ul class="socials__list">
+								<li class="socials__item">
+									<a href="https://github.com/FranzZZz1" target="_blank" class="socials__link socials__link--gh">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+											<path d="M18.965 19.1237C20.4675 18.8112 21.8313 18.2712 22.89 17.4787C24.7 16.1237 25.625 14.0312 25.625 11.965C25.625 10.515 25.075 9.16124 24.12 8.01499C23.5887 7.37624 25.1438 3.17499 23.7625 3.81624C22.3813 4.45874 20.3562 5.31374 19.295 4.99999C18.1587 4.66499 16.92 4.47999 15.625 4.47999C14.5 4.47999 13.4175 4.61874 12.4075 4.87624C10.94 5.24874 9.5375 4.42249 8.125 3.81624C6.7125 3.21124 7.48375 7.57624 7.06375 8.09374C6.15125 9.22499 5.625 10.55 5.625 11.965C5.625 14.0312 6.74375 16.1237 8.55375 17.4775C9.76 18.38 11.2712 18.9562 12.9625 19.24" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.9625 19.2387C12.2375 20.035 11.8763 20.7887 11.8763 21.505V26.25M18.965 19.1237C19.6512 20.0225 19.9937 20.8287 19.9937 21.5437V26.25M4.375 19.585C4.9375 19.6525 5.35375 19.91 5.625 20.3575C6.0325 21.0287 7.54625 23.515 9.26625 23.515H11.875" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="https://t.me/slnest" target="_blank" class="socials__link socials__link--tg">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
+											<path d="M19.5525 2.99697C19.3117 3.01449 19.0754 3.07097 18.8527 3.16422H18.8497C18.636 3.24897 17.6197 3.67647 16.0747 4.32447L10.5382 6.65622C6.5655 8.32872 2.66025 9.97572 2.66025 9.97572L2.70675 9.95772C2.70675 9.95772 2.4375 10.0462 2.15625 10.239C1.98249 10.3495 1.83298 10.4942 1.71675 10.6642C1.57875 10.8667 1.46775 11.1765 1.509 11.4967C1.5765 12.0382 1.9275 12.363 2.1795 12.5422C2.4345 12.7237 2.6775 12.8085 2.6775 12.8085H2.6835L6.34575 14.0422C6.51 14.5695 7.46175 17.6985 7.6905 18.4192C7.8255 18.8497 7.95675 19.119 8.121 19.3245C8.2005 19.4295 8.2935 19.5172 8.40525 19.5877C8.46334 19.6215 8.52529 19.6482 8.58975 19.6672L8.55225 19.6582C8.5635 19.6612 8.5725 19.6702 8.58075 19.6732C8.61075 19.6815 8.631 19.6845 8.66925 19.6905C9.249 19.866 9.71475 19.506 9.71475 19.506L9.741 19.485L11.9032 17.5162L15.5272 20.2965L15.6097 20.3317C16.365 20.6632 17.13 20.4787 17.5342 20.1532C17.9415 19.8255 18.0997 19.4062 18.0997 19.4062L18.126 19.3387L20.9265 4.99197C21.006 4.63797 21.0262 4.30647 20.9385 3.98472C20.848 3.65909 20.6391 3.37903 20.3527 3.19947C20.1123 3.05331 19.8335 2.98276 19.5525 2.99697ZM19.4767 4.53447C19.4737 4.58172 19.4827 4.57647 19.4617 4.66722V4.67547L16.6875 18.873C16.6755 18.8932 16.6552 18.9375 16.5997 18.9817C16.5412 19.0282 16.4947 19.0575 16.251 18.9607L11.8185 15.5625L9.141 18.003L9.7035 14.4105L16.9455 7.66047C17.244 7.38297 17.1442 7.32447 17.1442 7.32447C17.1652 6.98397 16.6935 7.22472 16.6935 7.22472L7.5615 12.882L7.5585 12.867L3.1815 11.3932V11.3902L3.17025 11.388C3.17792 11.3854 3.18543 11.3824 3.19275 11.379L3.21675 11.367L3.24 11.3587C3.24 11.3587 7.14825 9.71172 11.121 8.03922C13.11 7.20147 15.114 6.35772 16.6552 5.70672C17.5693 5.32197 18.4843 4.93947 19.4002 4.55922C19.4617 4.53522 19.4325 4.53447 19.4767 4.53447Z" fill="white" />
+										</svg>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
-
-					<a href="home.html" class="preview__link">
-						Go to main page
-					</a>
 				</div>
-			</section>
+
+				<button class="header__burger btn-reset visible-mobile">
+					<svg viewBox="0 0 32 32">
+						<path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+						<path class="line" d="M7 16 27 16"></path>
+					</svg>
+				</button>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="loading-overlay">
+				<!-- <div class="jelly"></div>
+    <svg width="0" height="0" class="jelly-maker">
+        <defs>
+            <filter id="uib-jelly-ooze">
+                <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="6.25"
+                    result="blur"
+                ></feGaussianBlur>
+                <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="ooze"
+                ></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="ooze"></feBlend>
+            </filter>
+        </defs>
+    </svg> -->
+				<div class="loader"></div>
+			</div>
+
+			<div class="main__content main__content--home">
+				<section class="hero" id="home-hero" data-watch data-watch-once>
+					<div class="hero__container container">
+						<div class="hero__content">
+							<h1 class="hero__title">Dynamic Header Plugin</h1>
+							<p class="hero__subtitle">
+								Плагин, цель которого - упростить Вашу разработку
+							</p>
+							<a href="" class="hero__link"><span>Приступить</span></a>
+						</div>
+					</div>
+				</section>
+
+			</div>
 		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+
+			</div>
+		</footer>
+
 	</div>
-	<script src="js/app.min.js?_v=20240421210059"></script>
+	<script src="js/app.min.js?_v=20240421213301"></script>
 
 </body>
 

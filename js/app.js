@@ -4955,8 +4955,8 @@
                     loadingOverlay.classList.remove("loader-visible");
                 };
                 const loadScripts = url => {
-                    headerLogo.setAttribute("href", "home.html");
-                    if (url.includes("home.html")) homeScripts();
+                    headerLogo.setAttribute("href", "index.html");
+                    if (url.includes("index.html")) homeScripts();
                     if (url.includes("docs.html")) docsScripts();
                     if (url.includes("menu.html")) menuScripts(url);
                     if (url.includes("scrollWatch.html")) scrollWatchScripts(url);
