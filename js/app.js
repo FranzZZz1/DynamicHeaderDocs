@@ -4941,6 +4941,7 @@
         document.addEventListener("DOMContentLoaded", (function() {
             if (document.querySelector(".nav__link")) {
                 const urls = [ "headerHiding.html", "scrollWatch.html", "menu.html", "headerScrollOffset.html" ];
+                const initialPage = "index.html";
                 let currentPage = window.location.pathname;
                 const navLinks = document.querySelectorAll(".nav__link");
                 const content = document.querySelector(".main__content");
@@ -4956,7 +4957,7 @@
                 };
                 const loadScripts = url => {
                     headerLogo.setAttribute("href", "index.html");
-                    if (url.includes("index.html")) homeScripts();
+                    if (url.includes("index.html") || url === "") homeScripts();
                     if (url.includes("docs.html")) docsScripts();
                     if (url.includes("menu.html")) menuScripts(url);
                     if (url.includes("scrollWatch.html")) scrollWatchScripts(url);
@@ -5007,9 +5008,12 @@
                     linkEvents(link);
                 }));
                 linkEvents(headerLogo);
-                loadPage(currentPage.substring(1));
+                if (currentPage.substring(1) !== "") loadPage(currentPage.substring(1)); else {
+                    loadPage(initialPage);
+                    console.log(initialPage);
+                }
                 window.addEventListener("popstate", (() => {
-                    loadPage(currentPage.substring(1));
+                    if (currentPage.substring(1) !== "") loadPage(currentPage.substring(1)); else loadPage(initialPage);
                 }));
                 let scriptLoaded = false;
                 let docsScriptLoaded = false;
