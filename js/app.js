@@ -4961,7 +4961,6 @@
                     if (url.includes("menu.html")) menuScripts(url);
                     if (url.includes("scrollWatch.html")) scrollWatchScripts(url);
                     if (urls.includes(url)) modulesScripts(url);
-                    console.log(url);
                     generalScripts();
                     const modulesLinks = document.querySelectorAll(".modules__link--docs");
                     if (modulesLinks) modulesLinks.forEach((link => {
@@ -4985,7 +4984,8 @@
                         content.classList.add("fade-out");
                         setTimeout((() => {
                             content.classList.remove("fade-out");
-                            history.pushState({}, "", url);
+                            const relativeUrl = url.replace(window.location.origin, "");
+                            history.pushState({}, "", relativeUrl);
                             hideLoadingOverlay();
                         }), 250);
                     })).then((() => {
@@ -4997,7 +4997,8 @@
                         e.preventDefault();
                         const url = e.currentTarget.getAttribute("href");
                         if (!url || url === "#") return;
-                        currentPage = window.location.pathname;
+                        const uri = new URL(location);
+                        currentPage = uri.pathname;
                         if (currentPage.substring(1).includes(url)) return;
                         if (loader) showLoadingOverlay();
                         loadPage(url);
