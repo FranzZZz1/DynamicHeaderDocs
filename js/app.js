@@ -4984,7 +4984,7 @@
                         content.classList.add("fade-out");
                         setTimeout((() => {
                             content.classList.remove("fade-out");
-                            const relativeUrl = url.replace(window.location.origin, "");
+                            const relativeUrl = url.replace(window.location.origin + window.location.pathname, "");
                             history.pushState({}, "", relativeUrl);
                             hideLoadingOverlay();
                         }), 250);
