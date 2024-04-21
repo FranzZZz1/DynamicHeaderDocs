@@ -4940,7 +4940,7 @@
         var masonry = __webpack_require__(994);
         document.addEventListener("DOMContentLoaded", (function() {
             if (document.querySelector(".nav__link")) {
-                const urls = [ "/headerHiding.html", "/scrollWatch.html", "/menu.html", "/headerScrollOffset.html" ];
+                const urls = [ "headerHiding.html", "scrollWatch.html", "menu.html", "headerScrollOffset.html" ];
                 let currentPage = window.location.pathname;
                 const navLinks = document.querySelectorAll(".nav__link");
                 const content = document.querySelector(".main__content");
@@ -4956,11 +4956,12 @@
                 };
                 const loadScripts = url => {
                     headerLogo.setAttribute("href", "home.html");
-                    if (url.includes("/home.html")) homeScripts();
-                    if (url.includes("/docs.html")) docsScripts();
-                    if (url.includes("/menu.html")) menuScripts(url);
-                    if (url.includes("/scrollWatch.html")) scrollWatchScripts(url);
+                    if (url.includes("home.html")) homeScripts();
+                    if (url.includes("docs.html")) docsScripts();
+                    if (url.includes("menu.html")) menuScripts(url);
+                    if (url.includes("scrollWatch.html")) scrollWatchScripts(url);
                     if (urls.includes(url)) modulesScripts(url);
+                    console.log(url);
                     generalScripts();
                     const modulesLinks = document.querySelectorAll(".modules__link--docs");
                     if (modulesLinks) modulesLinks.forEach((link => {
@@ -4997,7 +4998,7 @@
                         const url = e.currentTarget.getAttribute("href");
                         if (!url || url === "#") return;
                         currentPage = window.location.pathname;
-                        if (currentPage.includes(url)) return;
+                        if (currentPage.substring(1).includes(url)) return;
                         if (loader) showLoadingOverlay();
                         loadPage(url);
                     }));
@@ -5006,9 +5007,9 @@
                     linkEvents(link);
                 }));
                 linkEvents(headerLogo);
-                loadPage(currentPage);
+                loadPage(currentPage.substring(1));
                 window.addEventListener("popstate", (() => {
-                    loadPage(currentPage);
+                    loadPage(currentPage.substring(1));
                 }));
                 let scriptLoaded = false;
                 let docsScriptLoaded = false;
@@ -5110,7 +5111,7 @@
                         "headerScrollOffset.html": "Header Scroll Offset"
                     };
                     const modulesArray = Object.entries(modules);
-                    const currentIndex = modulesArray.findIndex((([href]) => href === currentPageURL.substring(1)));
+                    const currentIndex = modulesArray.findIndex((([href]) => href === currentPageURL));
                     if (currentIndex === -1) return;
                     if (next) {
                         const nextDropdownList = next.querySelector(".next__dropdown-list");
