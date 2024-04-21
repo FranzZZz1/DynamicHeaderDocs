@@ -4984,10 +4984,10 @@
                         content.classList.add("fade-out");
                         setTimeout((() => {
                             content.classList.remove("fade-out");
-                            const relativeUrl = url.substring(url.indexOf("/") + 1);
+                            const relativeUrl = url.split(window.location.origin)[1];
                             history.pushState({}, "", relativeUrl);
                             hideLoadingOverlay();
-                            console.log(relativeUrl);
+                            console.log(relativeUrl, "split");
                         }), 250);
                     })).then((() => {
                         loadScripts(url);
