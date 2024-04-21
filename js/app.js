@@ -5008,12 +5008,12 @@
                     linkEvents(link);
                 }));
                 linkEvents(headerLogo);
-                if (currentPage.substring(1) !== "") loadPage(currentPage.substring(1)); else {
+                if (currentPage.substring(1) !== "" || currentPage.substring(1) !== "/") loadPage(currentPage.substring(1)); else {
                     loadPage(initialPage);
                     console.log(initialPage);
                 }
                 window.addEventListener("popstate", (() => {
-                    if (currentPage.substring(1) !== "") loadPage(currentPage.substring(1)); else loadPage(initialPage);
+                    if (currentPage.substring(1) !== "" || currentPage.substring(1) !== "/") loadPage(currentPage.substring(1)); else loadPage(initialPage);
                 }));
                 let scriptLoaded = false;
                 let docsScriptLoaded = false;
