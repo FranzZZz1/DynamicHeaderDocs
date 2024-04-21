@@ -4968,7 +4968,7 @@
                     }));
                     navLinks.forEach((link => {
                         const href = link.getAttribute("href");
-                        if (href && href !== "#" && url.includes(href)) link.classList.add("active"); else if (urls.includes(url) && href == "/docs.html") link.classList.add("active"); else link.classList.remove("active");
+                        if (href && href !== "#" && url.includes(href)) link.classList.add("active"); else if (urls.includes(url) && href == "docs.html") link.classList.add("active"); else link.classList.remove("active");
                     }));
                 };
                 const loadPage = url => {
