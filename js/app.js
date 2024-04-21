@@ -4984,9 +4984,8 @@
                         content.classList.add("fade-out");
                         setTimeout((() => {
                             content.classList.remove("fade-out");
-                            history.pushState({}, "", url);
                             hideLoadingOverlay();
-                            console.log("url");
+                            console.log("no pushes");
                         }), 250);
                     })).then((() => {
                         loadScripts(url);
