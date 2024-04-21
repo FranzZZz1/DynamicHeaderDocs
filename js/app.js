@@ -4940,7 +4940,7 @@
         var masonry = __webpack_require__(994);
         document.addEventListener("DOMContentLoaded", (function() {
             if (document.querySelector(".nav__link")) {
-                const urls = [ "/headerHiding.html", "/scrollWatch.html", "/menu.html", "/headerScrollOffset.html" ];
+                const urls = [ "headerHiding.html", "scrollWatch.html", "menu.html", "headerScrollOffset.html" ];
                 let currentPage = window.location.pathname;
                 const navLinks = document.querySelectorAll(".nav__link");
                 const content = document.querySelector(".main__content");
@@ -4955,11 +4955,11 @@
                     loadingOverlay.classList.remove("loader-visible");
                 };
                 const loadScripts = url => {
-                    headerLogo.setAttribute("href", "/home.html");
-                    if (url.includes("/home.html")) homeScripts();
-                    if (url.includes("/docs.html")) docsScripts();
-                    if (url.includes("/menu.html")) menuScripts(url);
-                    if (url.includes("/scrollWatch.html")) scrollWatchScripts(url);
+                    headerLogo.setAttribute("href", "home.html");
+                    if (url.includes("home.html")) homeScripts();
+                    if (url.includes("docs.html")) docsScripts();
+                    if (url.includes("menu.html")) menuScripts(url);
+                    if (url.includes("scrollWatch.html")) scrollWatchScripts(url);
                     if (urls.includes(url)) modulesScripts(url);
                     generalScripts();
                     const modulesLinks = document.querySelectorAll(".modules__link--docs");
@@ -5103,11 +5103,11 @@
                     const next = document.querySelector(".next");
                     const prev = document.querySelector(".prev");
                     const modules = {
-                        "/docs.html": "Документация",
-                        "/headerHiding.html": "Header Hiding",
-                        "/menu.html": "Menu",
-                        "/scrollWatch.html": "Scroll Watch",
-                        "/headerScrollOffset.html": "Header Scroll Offset"
+                        "docs.html": "Документация",
+                        "headerHiding.html": "Header Hiding",
+                        "menu.html": "Menu",
+                        "scrollWatch.html": "Scroll Watch",
+                        "headerScrollOffset.html": "Header Scroll Offset"
                     };
                     const modulesArray = Object.entries(modules);
                     const currentIndex = modulesArray.findIndex((([href]) => href === currentPageURL));
